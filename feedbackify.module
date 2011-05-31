@@ -40,7 +40,7 @@ function feedbackify_footer() {
   $feedbackify_pos = check_plain(variable_get('feedbackify_pos', 'right'));
   $feedbackify_colour = check_plain(variable_get('feedbackify_colour', '#237BAB'));
 
-  if (!empty($feedbackify_id) && _feedbackify_visibility_pages()/**/) {
+  if (!empty($feedbackify_id) && _feedbackify_visibility_pages()) {
     $script .= 'document.write(unescape("%3Cscript src=\'" + document.location.protocol + "//fby.s3.amazonaws.com/fby.js\' type=\'text/javascript\'%3E%3C/script%3E"));';
     drupal_add_js($script, 'inline', 'footer');
     
