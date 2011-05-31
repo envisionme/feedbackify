@@ -21,15 +21,6 @@ function feedbackify_help($path, $arg) {
  */
 function feedbackify_menu() {
   $items = array();
-  $path = drupal_get_path('module', 'feedbackify');
-
-  $items[$path . '/js/feedbackify.js'] = array(
-    'title' => 'Feedbackify',
-    'page callback' => 'feedbackify_js',
-    'type' => MENU_CALLBACK,
-    'access arguments' => array(true),
-  );
-
   $items['admin/settings/feedbackify'] = array(
     'title' => 'Feedbackify',
     'description' => 'Configure the Feedbackify.',
@@ -66,8 +57,9 @@ function feedbackify_settings_form() {
   $form = array();
   $form['feedbackify_id'] = array(
     '#type' => 'textfield',
-    '#title' => t('Form ID'),
+    '#title' => t('Feedbackify form ID'),
     '#default_value' => variable_get('feedbackify_id', NULL),
+    '#required' => TRUE
   );
 
   $form['feedbackify_colour'] = array(
