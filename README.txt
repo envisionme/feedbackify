@@ -11,6 +11,22 @@ Installation
 3. Enable this module
 4. Go into Admin > Settings > Feedbackify and paste your copied form ID in the required box
 
+If you don't like the default hover and active state colours on the Feedbackify form you can always override them like this:
+/**
+ * Feedbackify
+ */
+div#feedbackify .select-on td a, div#feedbackify .select-on td a:hover, div#feedbackify .select td a:hover, div#feedbackify .txt1 {
+  color: #e61166 !important;
+}
+
+div#feedbackify .select-on {
+  background-color: #e61166 !important;
+}
+
+div#feedbackify .cat-arrow img {
+  display: none;
+}
+
 Sponsors
 --------------
 This module was kindly sponsored by NoJoShmo.com and is maintained by Ivan Breet (ivanbreet). This module is based on the Get Satisfaction module.
