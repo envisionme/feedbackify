@@ -15,6 +15,13 @@ function feedbackify_help($path, $arg) {
 }
 
 /**
+ * Implementation of hook_perm()
+ */
+function feedbackify_perm() {
+  return array('administer feedbackify');
+}
+
+/**
  * Implementation of hook_menu().
  */
 function feedbackify_menu() {
@@ -24,7 +31,7 @@ function feedbackify_menu() {
     'description' => 'Configure the Feedbackify.',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('feedbackify_settings_form'),
-    'access arguments' => array('access administration pages'),
+    'access arguments' => array('administer feedbackify'),
     'type' => MENU_NORMAL_ITEM,
   );
   return $items;
