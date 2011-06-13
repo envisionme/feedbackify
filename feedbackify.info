@@ -1,4 +1,3 @@
-; $Id$
 name = Feedbackify
 description = Integrates the Feedbackify service
 core = 6.x
