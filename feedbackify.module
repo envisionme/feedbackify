@@ -38,14 +38,14 @@ function feedbackify_menu() {
 function feedbackify_footer() {
   $feedbackify_id = check_plain(variable_get('feedbackify_id', ''));
   $feedbackify_pos = check_plain(variable_get('feedbackify_pos', 'right'));
-  $feedbackify_colour = check_plain(variable_get('feedbackify_colour', '#237BAB'));
+  $feedbackify_color = check_plain(variable_get('feedbackify_color', '#237BAB'));
 
   if (!empty($feedbackify_id) && _feedbackify_visibility_pages()) {
     $script .= 'document.write(unescape("%3Cscript src=\'" + document.location.protocol + "//fby.s3.amazonaws.com/fby.js\' type=\'text/javascript\'%3E%3C/script%3E"));';
     drupal_add_js($script, 'inline', 'footer');
     
     // print Feedbackify label
-    $script = 'FBY.showTab({id: \'' . $feedbackify_id . '\', position: \'' . $feedbackify_pos . '\', color: \'' . $feedbackify_colour . '\'});';
+    $script = 'FBY.showTab({id: \'' . $feedbackify_id . '\', position: \'' . $feedbackify_pos . '\', color: \'' . $feedbackify_color . '\'});';
     drupal_add_js($script, 'inline', 'footer');
   }
 }
@@ -62,10 +62,10 @@ function feedbackify_settings_form() {
     '#required' => TRUE
   );
 
-  $form['feedbackify_colour'] = array(
+  $form['feedbackify_color'] = array(
     '#type' => 'textfield',
-    '#title' => t('Button Colour'),
-    '#default_value' => variable_get('feedbackify_colour', '#237BAB'),
+    '#title' => t('Button color'),
+    '#default_value' => variable_get('feedbackify_color', '#237BAB'),
   );
 
   $form['feedbackify_pos'] = array(
