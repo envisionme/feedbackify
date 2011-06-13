@@ -64,6 +64,7 @@ function feedbackify_settings_form() {
     '#type' => 'textfield',
     '#title' => t('Button color'),
     '#default_value' => variable_get('feedbackify_color', '#237BAB'),
+    '#description' => t('Please supply the hexadecimal color value(#237BAB) for the button. The button will be transparent if left blank.')
   );
 
   $form['feedbackify_pos'] = array(
