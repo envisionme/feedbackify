@@ -1,0 +1,30 @@
+<?php
+/**
+ * @file
+ * Installation file for the Feedbackify module.
+ */
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function feedbackify_install() {
+  variable_set('feedbackify_visibility', 0);
+  $pages = array(
+    'admin',
+    'admin/*',
+  );
+  variable_set('feedbackify_pages', implode("\n", $pages));
+  drupal_set_message(t('Feedbackify is now installed. Please take a second to !link.', array('!link' => l('configure it', 'admin/settings/feedbackify'))));
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function feedbackify_uninstall() {
+  // remove module variables
+  variable_del('feedbackify_id');
+  variable_del('feedbackify_pos');
+  variable_del('feedbackify_color');
+  variable_del('feedbackify_visibility');
+  variable_del('feedbackify_pages');
+}
