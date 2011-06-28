@@ -1,5 +1,3 @@
-; $Id $
-
 Feedbackify
 -----------------
 This module integrates the Feedbackify service with Drupal. You need a Feedbackify account in order to use this module.
@@ -31,4 +29,4 @@ Sponsors
 --------------
 This module was kindly sponsored by NoJoShmo.com and is maintained by Ivan Breet (ivanbreet). This module is based on the Get Satisfaction module.
 
-*Please note that Feedbackify is a paid service, but they do offer a 15 Day trail.
+* Please note that Feedbackify is a paid service, but they do offer a 15 Day trial.
