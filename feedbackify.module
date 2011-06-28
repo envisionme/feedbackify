@@ -15,7 +15,7 @@ function feedbackify_help($path, $arg) {
 }
 
 /**
- * Implementation of hook_perm()
+ * Implementation of hook_perm().
  */
 function feedbackify_perm() {
   return array('administer feedbackify');
